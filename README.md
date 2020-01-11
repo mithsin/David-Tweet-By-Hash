@@ -28,6 +28,10 @@ sass,
 inline styles,
 Twitter API
 
+<img src="screenshot/Mobile-screen.jpg" width="300" >
+<img src="screenshot/Table-screen.jpg" width="300" >
+<img src="screenshot/full-screen.jpg" width="300" >
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
