@@ -1,25 +1,34 @@
 To setup:
 
-I: Twitter 
-    1, Register Twitter develper account - https://developer.twitter.com/
-    2, Create an App, by clicking your name on top right hand corner
-    3, Generate your bearer token.
-        ** replacing API key and secret key and copy paste into terminal**
-        curl -u '<API key>:<API secret key>' \
-        --data 'grant_type=client_credentials' \
-        'https://api.twitter.com/oauth2/token'
-    4, Get your enviornmet, by clicking your name on top right and corner > dev enviornment
-        -Setup your dev enviornment then copy look for 'Dev environment label'
-II: Clone this repo: https://github.com/mithsin/tweet-by-hash
-    1, Create .env
-    2, Copy and replace your Bearer key and env then paste it inside .env.
-        Twitter_Bearer="Bearer ********"
-        Twitter_env="**********"
-III: yarn or npm install 
-IV: yarn start
+## I: Twitter 
+1, Register Twitter develper account - https://developer.twitter.com/
+2, Create an App, by clicking your name on top right hand corner
+3, Generate your bearer token.
+
+** replacing API key and secret key and copy paste into terminal**
+curl -u '<API key>:<API secret key>' \
+--data 'grant_type=client_credentials' \
+'https://api.twitter.com/oauth2/token'
 
 
-Tech use in this project:
+4, Get your enviornmet, by clicking your name on top right and corner > dev enviornment
+
+-Setup your dev enviornment then copy look for 'Dev environment label'
+
+
+## II: Clone this repo: https://github.com/mithsin/tweet-by-hash
+1, Create .env
+2, Copy and replace your Bearer key and env then paste it inside .env.
+
+Twitter_Bearer="Bearer ********"
+Twitter_env="**********"
+
+
+## III: yarn or npm install 
+## IV: yarn start
+
+
+## Tech use in this project:
 React,
 Express,
 prop-types,
