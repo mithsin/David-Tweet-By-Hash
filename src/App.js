@@ -7,13 +7,16 @@ function App() {
   const [tweets, setTweets] = useState([]);
   const [searchInput, setSearchInput] = useState('');
   const [searchSubmit, setSearchSubmit] = useState('apple');
+  const [nextLoadKey, setNextLoadKey] = useState('');
+  const [loadMoreTrigger, setLoadMoreTrigger] = useState('');
 
   useEffect(()=>{
-    axios.get(`/api/tweetdatas/?hash=${searchSubmit}`)
+    axios.get(`/api/tweetdatas/?hash=${searchSubmit}&nextlist=${loadMoreTrigger}`)
       .then(res => {
-        setTweets(res.data.results)
+        setTweets(res.data.results);
+        setNextLoadKey(res.data.next ? res.data.next : '');
       });
-  }, [searchSubmit]);
+  }, [searchSubmit, loadMoreTrigger]);
 
   const onSearchSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +26,9 @@ function App() {
     if(e.key === 'Enter'){
       setSearchSubmit(searchInput)
     }
+  }
+  const loadMoreTweets = () => {
+    setLoadMoreTrigger(nextLoadKey)
   }
 
   return (
@@ -60,6 +66,11 @@ function App() {
           )}
         </Row>
       </Container>
+      { nextLoadKey && 
+        <Container>
+          <Button variant="primary" size="lg" block onClick={ loadMoreTweets }>NEXT</Button> 
+        </Container>
+      }
     </div>
   );
 };
