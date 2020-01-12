@@ -1,27 +1,27 @@
 To setup:
 
 ## I: Twitter 
-1, Register Twitter develper account - https://developer.twitter.com/
-2, Create an App, by clicking your name on top right hand corner
-3, Generate your bearer token.
+1, Register Twitter develper account - https://developer.twitter.com/<br />
+2, Create an App, by clicking your name on top right hand corner<br />
+3, Generate your bearer token.<br />
 
-** replacing API key and secret key and copy paste into terminal**
-curl -u '<API key>:<API secret key>' \
---data 'grant_type=client_credentials' \
-'https://api.twitter.com/oauth2/token'
+** replacing API key and secret key and copy paste into terminal**<br />
+curl -u '<API key>:<API secret key>' \<br />
+--data 'grant_type=client_credentials' \<br />
+'https://api.twitter.com/oauth2/token'<br />
 
 
-4, Get your enviornmet, by clicking your name on top right and corner > dev enviornment
+4, Get your enviornmet, by clicking your name on top right and corner > dev enviornment<br />
 
--Setup your dev enviornment then copy look for 'Dev environment label'
+-Setup your dev enviornment then copy look for 'Dev environment label'<br />
 
 
 ## II: Clone this repo: https://github.com/mithsin/tweet-by-hash
-1, Create .env
-2, Copy and replace your Bearer key and env then paste it inside .env.
+1, Create .env<br />
+2, Copy and replace your Bearer key and env then paste it inside .env.<br />
 
-Twitter_Bearer="Bearer ********"
-Twitter_env="**********"
+Twitter_Bearer="Bearer ********"<br />
+Twitter_env="**********"<br />
 
 
 ## III: yarn or npm install 
